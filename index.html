@@ -183,7 +183,8 @@
   .award::before{content:"◆ ";color:var(--accent)}
 
   /* projects */
-  .projects{display:grid;grid-template-columns:1fr;max-width:760px;margin:0 auto;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  @media (max-width:880px){.projects{grid-template-columns:1fr}}
   .proj{background:var(--black);padding:32px 28px;display:flex;flex-direction:column;min-height:380px;transition:background .25s;position:relative}
   .proj:hover{background:var(--panel);box-shadow:inset 0 0 0 1px rgba(44,232,200,.25)}
   .proj .id{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:#AEB8B4;display:flex;justify-content:space-between;margin-bottom:28px}
@@ -225,6 +226,8 @@
   .svc-cta-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 
 
+  .fig-logo{height:200px;border:1px solid var(--line);margin-bottom:24px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#000}
+  .fig-logo img{height:100%;width:auto;object-fit:contain;display:block}
   .fig-live{height:340px!important;background:#000!important;border:1px solid var(--line)}
   .fig-live iframe{width:100%;height:100%;border:0;display:block}
   .fig-expand{position:absolute;top:10px;right:10px;z-index:3;background:rgba(0,0,0,.72);border:1px solid rgba(44,232,200,.45);color:var(--accent);font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 11px;cursor:pointer;transition:all .2s;backdrop-filter:blur(4px)}
@@ -451,14 +454,14 @@
   <div class="eng-bg" aria-hidden="true"></div>
   <div class="s-corners" aria-hidden="true"><i class="tl"></i><span class="s-label">FIG. 04 — PROJECTS</span><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
   <div class="wrap">
-    <div class="sec-head reveal"><div aria-hidden="true"></div><div><h2>Current project.</h2><p>What I'm building right now — more coming soon.</p></div></div>
+    <div class="sec-head reveal"><div aria-hidden="true"></div><div><h2>Current projects.</h2><p>What I'm building right now.</p></div></div>
     <div class="projects reveal">
 
 
 
 
       <div class="proj proj-live">
-        <div class="id"><span>P-04 · In progress</span><span style="color:var(--accent)">May 2026 – Present</span></div>
+        <div class="id"><span>In progress</span><span style="color:var(--accent)">May 2026 – Present</span></div>
         <div class="fig fig-live">
           <iframe src="project/hd-001.html?embed=1" title="Solaris-001 interactive assembly" loading="lazy"></iframe>
           <button class="fig-expand" type="button" data-openproj aria-label="Expand assembly">⤢ Expand</button>
@@ -468,6 +471,14 @@
         <p>I'm also exploring computer vision and autonomous navigation so the drone can interpret its surroundings in real time, avoid obstacles, and perform simple tasks independently. Potential applications I'm considering include package delivery, environmental monitoring, and surveillance. I designed the components and full assembly in SolidWorks, including a parametric airframe and interactive exploded assembly, and then 3D-printed the custom parts for prototyping. I'm currently assembling the system and beginning initial testing and iteration in my free time.</p>
         <div class="tags"><span>Autonomous systems</span><span>Mechanical design</span><span>Parametric CAD</span><span>Energy systems</span></div>
         <button class="proj-cta" type="button" data-openproj>View interactive assembly →</button>
+      </div>
+      <div class="proj">
+        <div class="id"><span>In development</span><span style="color:var(--accent)">Coming soon</span></div>
+        <div class="fig fig-logo"><img src="gymbro-logo.jpg" alt="GymBro app logo"></div>
+        <h3>GymBro</h3>
+        <p>GymBro is an AI-powered nutrition and fitness platform designed to make nutrition and macro tracking faster and more engaging. The current version uses Gemini-based AI to analyze food images, identify meals, and estimate calories and macronutrients.</p>
+        <p>In parallel, research and development is underway on a new nutrition-specific AI model built from the ground up, using techniques such as depth estimation, structural analysis, portion geometry, and computer vision to improve food-volume estimation and push macro-tracking accuracy beyond what general-purpose AI models can provide. The first version of the app is soon to be released to the app store. Stay tuned!</p>
+        <div class="tags"><span>AI / Machine learning</span><span>Computer vision</span><span>App development</span><span>Nutrition</span></div>
       </div>
 
     </div>
